@@ -1,0 +1,81 @@
+/* inizio regole generali */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.container{
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    max-width: 800px;
+}
+
+.barra{
+    text-decoration: line-through;
+}
+
+.text-none{
+    text-decoration: none;
+}
+/* fine regole generali */
+
+
+/* inizio regole stilizzazione della pagina */
+
+h1{
+    margin-bottom: 20px;
+}
+
+ul{
+    list-style: none;
+    background-color: blue;
+    border-radius: 20px;
+    color: white;
+}
+
+input{
+    border-radius: 20px;
+}
+
+
+button{
+    padding: 10px 15px;
+    background-color: blue;
+    color: white;
+    border-radius: 20px;
+    border: 1px solid black;
+}
+.input-text{
+    margin-bottom: 50px;
+    margin-top: 15px;
+}
+
+.clear::after{
+    display: table;
+    clear: both;
+    content: "";
+}
+
+.list-item{
+    float: left;
+    width: 98%;
+}
+
+ul{
+    padding: 20px;
+}
+
+ul li{
+    padding: 20px;
+    text-align: left;
+}
+
+ul i{
+    float: right;
+    width: 2%;
+    text-align: right;
+}
