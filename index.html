@@ -23,15 +23,20 @@
             <h3>Aggiungi una cosa da fare</h3>
 
             <div class="input-text">
+
+
                 <input type="text"  @keyup.enter="addTodo" v-model="newtodo">
                 <button @click="addTodo">Aggiungi</button>
             </div>
     
             <ul class="clear">
-                <li  v-for="(todos, index) in todos" @click="check(index)" 
-                :class="todos.done == true? 'barra' : 'text-none'"
+              <!-- ciclo array per recuperare l'indice -->
+                <li  v-for="(todo, index) in todos" @click="check(index)" 
+                :class="todo.done == true ? 'barra' : 'text-none'"
                  class="list-item">
-                    {{todos.text}}
+                    {{todo.text}}
+
+                    <!-- al click rimuovo todo -->
                     <i class="fa-solid fa-xmark"  @click="remove(index)"></i>
                 </li>
             </ul>

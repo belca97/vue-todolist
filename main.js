@@ -29,12 +29,24 @@ const vue = new Vue(
 
         methods : {
 
-            // funzione per aggiungere una nuova voce 
+            // funzione per aggiungere una nuova voce
+            // la funzione trim mi consente di non aggiungere spazzi
             addTodo(){
-                this.todos.push(this.newtodo);
+                if(this.newtodo.trim() == ''){
+                    alert('Hai inserito un campo vuoto!')
+                } else{
+
+                    this.todos.push({
+                        text: this.newtodo.trim(),
+                     }) 
+
+                }
+
+                //resetta il campo dopo aggiunta
+                this.newtodo = ''
             },
 
-            //funzione per verificare se un voce è stata già fatta
+            //funzione per verificare se una voce è stata già fatta
             check(index){
                 this.todos[index].done = !this.todos[index].done
             },
